@@ -1,0 +1,238 @@
+/* style.css - Aura Complete Theme (Comfort + Scenery) */
+
+/* --- THEMES & VARIABLES --- */
+:root {
+    /* 🌑 DEFAULT STATE: Dark / Cool */
+    --bg-color: #0f1724; 
+    --card-bg: rgba(17, 24, 39, 0.7);
+    --text: #f3f4f6;
+    --muted: #9ca3af;
+    --accent: #6ee7b7;       /* Mint Green */
+    --border: rgba(255, 255, 255, 0.08);
+    --input-bg: rgba(0, 0, 0, 0.3);
+    --fog-opacity: 0.5;
+    
+    /* Bubble Colors (Cool Tones) */
+    --agent-bubble-bg: rgba(110, 231, 183, 0.1);
+    --agent-bubble-border: rgba(110, 231, 183, 0.1);
+    --agent-text: #f3f4f6;
+
+    --user-bubble-bg: rgba(255, 255, 255, 0.08);
+    --user-bubble-border: rgba(255, 255, 255, 0.08);
+    --user-text: #f3f4f6;
+}
+
+/* ☀️ CLARITY MODE: Warm / Day */
+body.clarity-mode {
+    /* 1. Background Journey: Black -> Gray -> White (12s Slow Fade) */
+    animation: sunriseShift 12s forwards; 
+    
+    /* 2. Update Variables for NEW messages to be warm instantly */
+    --text: #1f2937;           
+    --muted: #4b5563;
+    --accent: #f59e0b;         /* Warm Orange */
+    --border: rgba(0, 0, 0, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.8);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --fog-opacity: 0;          
+
+    /* Bubble Colors (Warm Tones) */
+    --agent-bubble-bg: rgba(251, 191, 36, 0.2); /* Soft Yellow */
+    --agent-bubble-border: rgba(251, 191, 36, 0.4);
+    --agent-text: #1f2937;
+
+    --user-bubble-bg: #f59e0b; /* Solid Orange */
+    --user-bubble-border: #f59e0b;
+    --user-text: #ffffff;
+}
+
+/* 🌅 Background Animation */
+@keyframes sunriseShift {
+    0% { background: #000000; }   
+    50% { background: #6b7280; }  
+    100% { background: #f9fafb; } 
+}
+
+/* --- BASE STYLES --- */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 16px;
+    overflow: hidden;
+    transition: color 10s ease; 
+}
+
+/* --- CHAT BUBBLES --- */
+.message {
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 14.5px;
+    word-wrap: break-word;
+    animation: fadeIn 0.5s ease-out;
+    /* Morph slowly (8s) when theme changes */
+    transition: background-color 8s ease, border-color 8s ease, color 8s ease;
+}
+
+.agent-message {
+    background: var(--agent-bubble-bg);
+    border: 1px solid var(--agent-bubble-border);
+    color: var(--agent-text);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.user-message {
+    background: var(--user-bubble-bg);
+    border: 1px solid var(--user-bubble-border);
+    color: var(--user-text);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- FOG LAYER --- */
+.fog-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png') repeat-x;
+    background-size: 200% auto;
+    opacity: var(--fog-opacity);
+    z-index: -1;
+    animation: moveFog 60s linear infinite;
+    transition: opacity 10s ease; 
+    pointer-events: none;
+}
+body.clarity-mode .fog-layer { opacity: 0 !important; }
+
+@keyframes moveFog { 0% { background-position: 0 0; } 100% { background-position: 100% 0; } }
+
+/* --- SCENERY: SUN, CLOUDS, BIRDS --- */
+.scenery-container {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 5s ease;
+}
+body.clarity-mode .scenery-container { opacity: 1; }
+
+/* Sun */
+.sun-light {
+    position: absolute; top: -150px; right: -150px; width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255, 223, 128, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(60px);
+    animation: sunPulse 10s infinite alternate;
+}
+@keyframes sunPulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.1); opacity: 1; } }
+
+/* Clouds */
+.cloud {
+    position: absolute; background: #fff; width: 200px; height: 60px;
+    border-radius: 200px; opacity: 0.8;
+    box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+.cloud::after, .cloud::before {
+    content: ''; position: absolute; background: #fff; width: 100px; height: 80px;
+    top: -15px; left: 10px; border-radius: 100px; transform: rotate(30deg);
+}
+.cloud::after { width: 120px; height: 120px; top: -55px; left: auto; right: 15px; }
+
+.cloud-1 { top: 10%; left: -20%; transform: scale(0.8); animation: floatCloud 60s linear infinite; }
+.cloud-2 { top: 25%; left: -20%; transform: scale(0.5); animation: floatCloud 85s linear infinite reverse; opacity: 0.6; }
+.cloud-3 { top: 5%;  left: -20%; transform: scale(0.6); animation: floatCloud 100s linear infinite 20s; }
+@keyframes floatCloud { 0% { left: -20%; } 100% { left: 110%; } }
+
+/* Birds */
+.bird-container { position: absolute; top: 20%; left: -10%; transform: scale(0); will-change: transform; }
+.bird {
+    width: 30px; height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23555'%3E%3Cpath d='M22.5 12c0-5-5-9-10.5-9S1.5 7 1.5 12c0 .5.5 1 1 1s1-.5 1-1C3.5 8 7.5 5 12 5s8.5 3 8.5 7c0 .5.5 1 1 1s1-.5 1-1z'/%3E%3Cpath d='M2 12c0-2 2-4 4-4s3 1 3 2c0 .5.5 1 1 1s1-.5 1-1c0-2-2-4-5-4S1 8 1 12c0 .5.5 1 1 1s1-.5 1-1z'/%3E%3C/svg%3E");
+    background-size: contain; background-repeat: no-repeat;
+    animation: flap 0.5s infinite alternate;
+}
+.bird-1 { animation: flyAcross 25s linear infinite; animation-delay: 2s; }
+.bird-2 { top: 40%; transform: scale(0.7); animation: flyAcross 35s linear infinite; animation-delay: 15s; }
+
+@keyframes flyAcross {
+    0% { left: -10%; transform: translateY(0) scale(0.5); }
+    20% { transform: translateY(-30px) scale(0.5); }
+    60% { transform: translateY(-50px) scale(0.5); }
+    100% { left: 110%; transform: translateY(0) scale(0.5); }
+}
+@keyframes flap { 0% { transform: scaleY(1); } 100% { transform: scaleY(0.6); } }
+
+/* --- CONTAINER & UI --- */
+#chat-container {
+    width: 450px; max-width: 100%; height: 85vh;
+    background: var(--card-bg); backdrop-filter: blur(10px);
+    border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid var(--border);
+    display: flex; flex-direction: column; overflow: hidden;
+    transition: background-color 8s ease, border-color 8s ease;
+}
+
+#chat-header {
+    padding: 18px 20px; font-weight: 600; font-size: 16px;
+    background: rgba(255, 255, 255, 0.03); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px; color: var(--accent);
+    transition: border-color 8s ease, color 8s ease;
+}
+
+#chat-messages { padding: 20px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth; }
+
+#chat-input-area {
+    display: flex; gap: 10px; padding: 16px;
+    border-top: 1px solid var(--border); background: rgba(0,0,0,0.05);
+    transition: border-color 8s ease;
+}
+
+#user-input {
+    flex: 1; padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--input-bg); color: var(--text); outline: none; font-size: 15px;
+    transition: background 8s ease, border-color 8s ease, color 8s ease;
+}
+#user-input:focus { border-color: var(--accent); }
+
+#send-button {
+    padding: 0 20px; border-radius: 10px; border: none;
+    background: var(--accent); color: #fff; font-weight: 700; cursor: pointer;
+    transition: background 8s ease;
+}
+#send-button:hover { opacity: 0.9; transform: translateY(-1px); }
+
+/* --- MODALS --- */
+.modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(4px); z-index: 100; padding: 20px; }
+.modal.open { display: flex; animation: fadeModal 0.2s ease-out; }
+@keyframes fadeModal { from { opacity: 0; } to { opacity: 1; } }
+.modal-panel { background: #1f2937; padding: 24px; width: 100%; max-width: 420px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8); text-align: center; }
+.modal-panel h2 { margin: 0 0 10px 0; font-size: 1.25rem; color: #f3f4f6; }
+.modal-panel p { color: #9ca3af; margin: 0 0 20px 0; font-size: 0.95rem; }
+
+/* Booking Slots */
+#slots-list { margin-top: 15px; margin-bottom: 15px; display: flex; flex-direction: column; gap: 12px; max-height: 300px; overflow-y: auto; padding-right: 8px; }
+.slot-item { display: flex; align-items: flex-start; padding: 16px; border-radius: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); }
+.slot-item strong { color: #6ee7b7; font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: 700; width: 70px; flex-shrink: 0; margin-top: 6px; }
+.slot-item div { display: flex; flex-wrap: wrap; gap: 8px; flex: 1; }
+.slot-item button { padding: 8px 14px; border-radius: 6px; border: 1px solid rgba(110, 231, 183, 0.3); cursor: pointer; background: rgba(110, 231, 183, 0.1); color: #6ee7b7; font-weight: 600; font-size: 0.9rem; transition: all 0.2s ease; }
+.slot-item button:hover { background: #6ee7b7; color: #042018; transform: translateY(-1px); }
+
+.modal-actions { display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end; }
+#close-booking-btn, #close-escalation-btn { background: transparent; color: #9ca3af; border: none; padding: 8px 12px; cursor: pointer; }
+.emergency-call-box { background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 12px; padding: 16px; margin: 20px 0; display: flex; flex-direction: column; gap: 12px; }
+.emergency-call-box label { color: #fca5a5; font-size: 0.9rem; font-weight: 600; text-align: left; }
+.emergency-call-box input { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); padding: 12px; border-radius: 8px; color: white; font-size: 1.1rem; outline: none; }
+.danger-btn { background: #ef4444; color: white; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.4); transition: all 0.2s; }
+.danger-btn:hover { background: #dc2626; transform: translateY(-1px); }

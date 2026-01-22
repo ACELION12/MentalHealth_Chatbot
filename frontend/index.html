@@ -1,0 +1,154 @@
+<!-- <!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mental Health Agent — Aura</title>
+<link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+<div id="chat-container">
+    <div id="chat-header">Mental Health Agent</div>
+    <div id="chat-messages" aria-live="polite"></div>
+    <div id="chat-input-area">
+    <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off"/>
+    <button id="send-button">Send</button>
+    </div>
+</div>
+
+<div id="escalation-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+        <h2 style="color: #e74c3c;">⚠️ Immediate Support</h2>
+        <p id="escalation-text">We can connect you to our emergency support line immediately.</p>
+        
+        <div class="emergency-call-box" style="margin: 20px 0; display: flex; flex-direction: column; gap: 10px;">
+            <label for="patient-phone" style="font-weight: bold; text-align: left;">Enter your phone number:</label>
+            <input type="tel" id="patient-phone" placeholder="e.g. 9876543210" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;" />
+            
+            <button 
+                id="trigger-call-btn" 
+                class="danger-btn" 
+                onclick="triggerEmergencyCall()"
+                style="background-color: #e74c3c; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1.1rem;">
+                📞 Call Me Now
+            </button>
+        </div>
+
+        <div class="modal-actions" style="justify-content: center; margin-top: 10px;">
+            <button id="close-escalation-btn" style="background: transparent; color: #666; text-decoration: underline; border: none; cursor: pointer;">No, I'm safe now</button>
+        </div>
+        
+        <small class="modal-note">This will trigger an automated call to your phone connecting you to the support.</small>
+    </div>
+</div>
+
+<div id="booking-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+    <h2>Booking Suggestion</h2>
+    <p id="booking-suggestion-text">Finding the next available clinician...</p>
+
+    <div id="slot-picker">
+        <label for="slot-date">Check slots for date (YYYY-MM-DD):</label>
+        <input id="slot-date" type="date"/>
+        <button id="check-slots-btn">Check</button>
+
+        <div id="slots-list" class="slots-list"></div>
+    </div>
+
+    <div class="modal-actions">
+        <button id="confirm-booking-btn" class="primary">Confirm suggested booking</button>
+        <button id="close-booking-btn">Cancel</button>
+    </div>
+
+    <small class="modal-note">We will not ask or store your personal contact info here in this demo.</small>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mental Health Agent — Aura</title>
+<link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<div class="fog-layer"></div>
+
+<div class="scenery-container">
+    <div class="sun-light"></div>
+    
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+
+    <div class="bird-container bird-1">
+        <div class="bird"></div>
+    </div>
+    <div class="bird-container bird-2">
+        <div class="bird"></div>
+    </div>
+</div>
+
+<div id="chat-container">
+    <div id="chat-header">Mental Health Agent</div>
+    <div id="chat-messages" aria-live="polite"></div>
+    <div id="chat-input-area">
+        <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off"/>
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<div id="escalation-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+        <h2 style="color: #e74c3c;">⚠️ Immediate Support</h2>
+        <p id="escalation-text">We can connect you to our emergency support line immediately.</p>
+        
+        <div class="emergency-call-box">
+            <label for="patient-phone">Enter your phone number:</label>
+            <input type="tel" id="patient-phone" placeholder="e.g. 9876543210" />
+            
+            <button id="trigger-call-btn" class="danger-btn" onclick="triggerEmergencyCall()">
+                📞 Call Me Now
+            </button>
+        </div>
+
+        <div class="modal-actions" style="justify-content: center;">
+            <button id="close-escalation-btn">No, I'm safe now</button>
+        </div>
+        
+        <small class="modal-note">This will trigger an automated call to your phone connecting you to support.</small>
+    </div>
+</div>
+
+<div id="booking-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+        <h2>Booking Suggestion</h2>
+        <p id="booking-suggestion-text">Finding the next available clinician...</p>
+
+        <div id="slot-picker">
+            <label for="slot-date">Check slots for date (YYYY-MM-DD):</label>
+            <input id="slot-date" type="date"/>
+            <button id="check-slots-btn">Check</button>
+
+            <div id="slots-list" class="slots-list"></div>
+        </div>
+
+        <div class="modal-actions">
+            <button id="confirm-booking-btn" class="primary" style="display:none;">Confirm suggested booking</button>
+            <button id="close-booking-btn">Cancel</button>
+        </div>
+
+        <small class="modal-note">We will not ask or store your personal contact info here in this demo.</small>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

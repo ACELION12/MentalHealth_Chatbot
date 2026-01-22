@@ -1,0 +1,14 @@
+# Ignore the virtual environment
+venv/
+env/
+.env
+
+# Ignore large model files (unless using LFS)
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Ignore compiled python files
+__pycache__/
+*.pyc

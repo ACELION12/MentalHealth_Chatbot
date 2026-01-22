@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clinician Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; padding: 20px; }
+        .header { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        h1 { margin: 0; color: #333; }
+        .live-tag { background: #ff4d4d; color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; animation: pulse 2s infinite; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #007bff; color: white; }
+        tr:hover { background: #f9f9f9; }
+        
+        .score-high { color: #d9534f; font-weight: bold; }
+
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🏥 Triage Dashboard</h1>
+        <span class="live-tag">● LIVE MONITORING</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Session ID</th>
+                <th>Trigger Message</th>
+                <th>Risk Score</th>
+            </tr>
+        </thead>
+        <tbody id="alert-table">
+            </tbody>
+    </table>
+
+    <script>
+        async function fetchAlerts() {
+            try {
+                // Fetch data from our new API
+                const response = await fetch('http://127.0.0.1:8000/api/admin/alerts');
+                const data = await response.json();
+                const tbody = document.getElementById('alert-table');
+                
+                tbody.innerHTML = ''; // Clear old data
+
+                data.alerts.forEach(alert => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${alert.timestamp}</td>
+                        <td style="font-family: monospace; color: #666;">${alert.session_id.substring(0,8)}...</td>
+                        <td>"${alert.user_message}"</td>
+                        <td class="score-high">${(alert.risk_score * 100).toFixed(0)}%</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (err) {
+                console.error("Failed to load alerts", err);
+            }
+        }
+
+        // Auto-refresh every 3 seconds
+        fetchAlerts();
+        setInterval(fetchAlerts, 3000);
+    </script>
+</body>
+</html>
