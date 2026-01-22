@@ -1,0 +1,35 @@
+﻿# Core Server
+fastapi
+uvicorn[standard]
+
+# AI & NLP (Hugging Face)
+transformers
+torch
+spacy
+# You might need to install a specific spaCy model as well, e.g., 'python -m spacy download en_core_web_sm'
+
+# Vector Database for RAG (example: ChromaDB)
+chromadb
+
+# Pydantic for data validation
+pydantic
+
+# For LLM Interaction (choose one or more based on your LLM choice)
+# If using OpenAI API:
+openai
+# If using Anthropic Claude:
+anthropic
+# If using a local LLM (e.g., via Hugging Face Inference API or a local server)
+# you might not need a specific client library, just 'requests' for HTTP calls.
+requests
+
+# For email/calendar simulation (if you expand beyond simple print statements)
+# httpx # Often used with FastAPI for async HTTP requests
+# google-api-python-client # For Google Calendar/Gmail APIs
+# python-dotenv # For managing API keys
+httpx
+sentence-transformers
+
+python-dotenv
+google-genai
+

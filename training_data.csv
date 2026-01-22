@@ -1,0 +1,286 @@
+text,label
+"I had a fantastic day at the park today",0
+"Can you help me book an appointment for tomorrow?",0
+"I am feeling a bit tired after work",0
+"My dog died and I feel really sad",0
+"I failed my math exam and I am so stressed",0
+"I don't know what to do about my relationship",0
+"I want to kill myself",1
+"There is no point in going on anymore",1
+"I just want to sleep and never wake up",1
+"Everyone would be better off without me",1
+"I have a plan to end it all tonight",1
+"I'm writing letters to say goodbye to my family",1
+"I feel empty inside like nothing matters",1
+"Please help me find a doctor",0
+"What are the symptoms of anxiety?",0
+"I love playing video games with my friends",0
+"I hate my job but I need the money",0
+"I am feeling very anxious about the presentation",0
+"I cut my finger while cooking",0
+"I can't see a future for myself",1
+"The pain is too much to bear forever",1
+"I'm checking out of this life",1
+"I am done with everything",1
+"I wish I was never born",1
+"I'm going to take all these pills",1
+"Do you have slots available for Dr. Smith?",0
+"The weather is really gloomy today",0
+"I am struggling with insomnia lately",0
+"My parents are fighting and it upsets me",0
+"I feel lonely sometimes",0
+"I'm going to jump off the bridge",1
+"I am preparing for my final exit",1
+"Goodbye world",1
+"I don't want to be here anymore",1
+"I feel like a burden to everyone I know",1
+"I'm looking for methods to die painlessly",1
+"It’s a beautiful morning",0
+"I enjoy reading books in the rain",0
+"Can you recommend a good therapist?",0
+"I am feeling overwhelmed by my workload",0
+"I'm sad that my favorite show ended",0
+"I am angry at my brother",0
+"It's too late for me to be saved",1
+"I have lost all hope",1
+"Nothing brings me joy anymore and I want out",1
+"I am searching for a way to end my life",1
+"I'm going to hurt myself",1
+"I just want it all to go black",1
+"I'm scared of the dark",0
+"My stomach hurts really bad",0
+"I think I have the flu",0
+"I am excited for the weekend",0
+"I'm really worried about my finances",0
+"She broke my heart and I'm crying",0
+"I am crying because I am frustrated",0
+"I'm worthless and should just die",1
+"I am a waste of space",1
+"I don't deserve to live",1
+"I'm afraid I might do something drastic",1
+"I can't stop thinking about suicide",1
+"I am planning my suicide",1
+"Hello are you a real person?",0
+"What is the capital of France?",0
+"I need to reschedule my appointment",0
+"I feel a bit down today but I'll be okay",0
+"I am nervous about the interview",0
+"I hate this traffic so much",0
+"I'm sorry for being a bother",0
+"I'm finally at peace with my decision to leave",1
+"I'm giving away my possessions",1
+"This is my last message to anyone",1
+"I just bought a rope",1
+"I'm standing on the edge",1
+"I'm holding the gun",1
+"I like pizza",0
+"I need mental health advice",0
+"How do I cope with stress?",0
+"I am happy to see you",0
+"Thanks for your help",0
+"I am feeling great",0
+"I am desperate for help",0
+"I feel trapped and the only way out is death",1
+"I can't take another day of this misery",1
+"I'm going to end my suffering",1
+"I'm sorry mom",1
+"I will be gone by morning",1
+"I feel like drowning myself",1
+"My life is over",1
+"Can I talk to a human agent?",0
+"What time does the clinic close?",0
+"I am feeling slightly depressed",0
+"I have a headache",0
+"I'm really annoyed at my boss",0
+"I lost my keys",0
+"I am completely broken and unfixable",1
+"I want to die but I'm scared",1
+"Please let me die",1
+"I'm researching how to hang myself",1
+"I am tired of fighting this battle alone",1
+"I am dying to see the new movie",0
+"This project is killing me with the workload",0
+"My feet are killing me after that run",0
+"I'm dead tired from working late",0
+"You are killing it with that outfit",0
+"I could kill for a pizza right now",0
+"I'm dying of laughter",0
+"I feel like I'm in heaven with this cake",0
+"My heart hurts from the breakup",0
+"I feel like shooting myself for making that mistake",0
+"Shoot me an email later",0
+"I want to hang out with my friends",0
+"I'm drowning in paperwork",0
+"I'm at the end of my rope with this internet connection",0
+"I'm going to explode from anger",0
+"I wish the ground would swallow me up from embarrassment",0
+"I've been feeling really low lately but I have support",0
+"I need to talk to someone about my depression",0
+"I am seeking help for my mental health",0
+"I want to get better",0
+"Can I book a session for next week?",0
+"How much does a consultation cost?",0
+"Is Dr. Chen available on Friday?",0
+"I need to cancel my booking",0
+"Where is your clinic located?",0
+"I have a sharp pain in my chest",0
+"I think I broke my leg",0
+"I'm bleeding from a cut",0
+"I have a severe migraine",0
+"I am having a panic attack please help",0
+"I feel very dizzy",0
+"I can't breathe properly due to asthma",0
+"I'm allergic to peanuts",0
+"My back is really hurting",0
+"I am worried about my blood pressure",0
+"The world is a dark place and I don't belong",1
+"I am a mistake",1
+"I'm sorry for everything I've done",1
+"Nobody cares if I live or die",1
+"I'm going to end it tonight",1
+"I have the pills ready",1
+"I'm sitting on the tracks",1
+"I'm researching lethal doses",1
+"I'm going to swerve into traffic",1
+"I just wrote my suicide note",1
+"There is no hope for me",1
+"I am beyond saving",1
+"I'm finally going to be free from this pain",1
+"I'm going to take a long sleep",1
+"I am cleaning out my room for the last time",1
+"I'm saying goodbye to my friends",1
+"I can't handle the voices anymore",1
+"I'm going to cut my wrists",1
+"I have a noose",1
+"I'm going to drink bleach",1
+"I'm standing on the roof",1
+"I'm ready to go",1
+"I don't want to see tomorrow",1
+"Make it stop",1
+"I can't live with this guilt",1
+"I am unlovable and unwanted",1
+"I'm a burden to my parents",1
+"They will be happier when I am gone",1
+"I'm checking out",1
+"I'm pulling the plug",1
+"I'm going to jump",1
+"I'm taking the easy way out",1
+"I'm done fighting",1
+"I surrender to the darkness",1
+"I'm just really stress eating today",0
+"I forgot to take my medication",0
+"I am grieving the loss of my pet",0
+"I feel isolated at university",0
+"I'm having trouble focusing on studies",0
+"I'm nervous about the results",0
+"I'm frustrated with my life progress",0
+"I feel ugly today",0
+"I'm so bored I could die",0
+"I'm incredibly happy with the news",0
+"Congratulations on the promotion",0
+"I love my family so much",0
+"Today is a beautiful day",0
+"I'm looking forward to the holidays",0
+"I enjoy painting and drawing",0
+"My hobby is photography",0
+"I like to cook dinner",0
+"I'm watching a funny movie",0
+"I'm listening to sad music",0
+"I'm reading a book about death",0
+"I'm studying psychology",0
+"I'm writing a story about a murder",0
+"I'm curious about how the brain works",0
+"Tell me a joke",0
+"What is the meaning of life?",0
+"Who is the president?",0
+"Translate this sentence for me",0
+"I'm planning a trip to Europe",0
+"I'm buying a new car",0
+"I'm selling my house",0
+"I'm moving to a new city",0
+"I'm starting a new job",0
+"I'm quitting my job",0
+"I'm getting married",0
+"I'm getting divorced",0
+"I had a baby",0
+"I'm training for a marathon",0
+"I'm learning to play guitar",0
+"I'm going to the gym",0
+"I'm on a diet",0
+"I'm fasting today",0
+"I'm vegan",0
+"I'm drunk right now",0
+"I'm high on weed",0
+"I'm really angry at the government",0
+"I hate this weather",0
+"I love rainy days",0
+"I'm afraid of spiders",0
+"I have a phobia of heights",0
+"I'm claustrophobic",0
+"I'm exhausted mentally",0
+"I need a break from everything",0
+"I'm taking a mental health day",0
+"I'm practicing self-care",0
+"I'm meditating",0
+"I'm doing yoga",0
+"I'm journaling my thoughts",0
+"I'm talking to my mom",0
+"I'm walking my dog",0
+"I'm playing video games",0
+"I'm coding a project",0
+"I'm debugging my code",0
+"I'm fixing my computer",0
+"I'm cleaning my house",0
+"I'm doing laundry",0
+"I'm grocery shopping",0
+"I'm baking cookies",0
+"I'm watching the sunset",0
+"I'm looking at the stars",0
+"I'm dreaming of a better future",0
+"I have goals for next year",0
+"I want to learn Spanish",0
+"I want to travel the world",0
+"I want to fall in love",0
+"I want to be happy",0
+"I am hopeful",0
+"I am resilient",0
+"I am strong",0
+"I am capable",0
+"I am worthy",0
+"I am loved",0
+"I am enough",0
+"I am grateful",0
+"I am blessed",0
+"I am content",0
+"I am peaceful",0
+"I am safe",0
+"I plan to hurt myself",1
+"I'm going to poison myself",1
+"I'm going to suffocate myself",1
+"I'm going to overdose",1
+"I'm going to crash my car",1
+"I'm going to hang myself",1
+"I'm going to shoot myself",1
+"I'm going to stab myself",1
+"I'm going to burn myself",1
+"I'm going to drown myself",1
+"I'm going to starve myself to death",1
+"I'm going to freeze to death",1
+"I'm going to electrocute myself",1
+"I'm seeking a way out of this life",1
+"I'm tired of existing",1
+"I'm ready to leave this world",1
+"I'm preparing for the end",1
+"I'm saying my final goodbyes",1
+"I'm letting go",1
+"I'm giving up",1
+"I'm done trying",1
+"I'm finished",1
+"I'm exiting",1
+"I'm departing",1
+"I'm checking out early",1
+"I'm fading away",1
+"I'm disappearing",1
+"I'm erasing myself",1
+"I'm becoming nothing",1
+"I'm returning to the void",1
